@@ -9,3 +9,6 @@ langchain4j:
       chat-model:
         model-name: qwen-plus
         api-key: dashscope-api-key
+      embedding-model:
+        model-name: text-embedding-v4
+        api-key: dashscope-api-key
