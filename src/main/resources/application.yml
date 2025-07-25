@@ -12,3 +12,5 @@ langchain4j:
       embedding-model:
         model-name: text-embedding-v4
         api-key: dashscope-api-key
+bigmodel:
+  api-key: bigmodel-api-key

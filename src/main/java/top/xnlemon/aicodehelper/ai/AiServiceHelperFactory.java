@@ -1,6 +1,7 @@
 package top.xnlemon.aicodehelper.ai;
 
 
+import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
@@ -20,6 +21,9 @@ public class AiServiceHelperFactory {
     @Resource
     private ContentRetriever contentRetriever;
 
+    @Resource
+    private McpToolProvider mcpToolProvider;
+
     @Bean
     public AiCodeHelperService aiCodeHelperService(){
 
@@ -29,6 +33,7 @@ public class AiServiceHelperFactory {
                 .chatModel(qwenChatModel)
                 .chatMemory(chatMemory)
                 .contentRetriever(contentRetriever) //RAG Example
+                .toolProvider(mcpToolProvider)//MCP Example
                 //.chatMemoryProvider(memoryId -> MessageWindowChatMemory.withMaxMessages(10))
                 .build();
 

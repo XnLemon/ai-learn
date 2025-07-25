@@ -37,4 +37,11 @@ class AiCodeHelperServiceTest {
         System.out.println(result);
     }
 
+
+    @Test
+    public void chatwithMCP() {
+        String result  = aiCodeHelperService.chat("osu是什么游戏？");
+        System.out.println(result);
+    }
+
 }
